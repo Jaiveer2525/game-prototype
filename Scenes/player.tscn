@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkvv010j7utdy"]
+
+[ext_resource type="Script" path="res://UltimatePlatformerController.gd" id="1_v0iea"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0iea"]
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_v0iea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_cvnsp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_v0iea")
